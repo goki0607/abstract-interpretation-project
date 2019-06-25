@@ -1,0 +1,86 @@
+\documentclass [10pt]{article}
+
+%\textheight 8.7in
+%\textwidth  6.5in
+%\topmargin      0in
+%\oddsidemargin  0in
+%\evensidemargin 0in
+%\baselineskip 15pt
+
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amssymb,amsmath,amstext}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{mathtools}
+
+\newcommand*{\QED}{\hfill\ensuremath{\square}}%
+
+\begin{document}
+
+\title{Manual for Abstract Interpreter Project}
+\author{Goktug Saatcioglu, NYU Computer Science}
+\date{05.10.2019}
+\maketitle
+
+This is the documentation for the abstract interpret project for Prof. Cousot's Abstract Interpretation course. All project files are written in OCaml and required libraries are described later on in the document.\par
+The project is split into two folders: \verb|domains| and \verb|src|. The folder \verb|src| contains two folders where the first is called \verb|no-ptr|. This folder contains the implementation of a lexer, parser, abstract syntax tree, fixpoint calculator and a generic abstract interpreter for the language without pointers. Similarly, the second folder \verb|ptr| includes the same implementations of \verb|no-ptr| but extended to the pointer language. So, abstract domains that do not deal with pointers will be used with the contents of \verb|no-ptr| and abstract domains that also have pointers will be used with the contents of \verb|ptr|.\newline
+The folder \verb|domains| includes the implementation of several abstract domains. They are as follows (listed in the format ``\verb|folder-name|: implemented domain''):
+\begin{itemize}
+  \item \verb|bottop|: a simple abstract domain with the elements bot and top (only used for testing purposes),
+  \item \verb|congruence|: Cartesian congruence domain (fb),
+  \item \verb|constancy|: Cartesian constancy domain (fb),
+  \item \verb|interval|: Cartesian interval domain (fb),
+  \item \verb|octagon-apron|: octagon domain using Apron library (f),
+  \item \verb|parity|: Cartesian parity domain (fb),
+  \item \verb|poly-elina|: polyhedral domain using Elina library (f),
+  \item \verb|potential-points-to|: flow-sensitive Cartesian potential points-to domain (f),
+  \item \verb|potential-points-to-interval|: combination of potential points-to and intervals (fb),
+  \item \verb|red-prod-congruences-intervals|: reduced product of congruences and intervals (fb),
+  \item \verb|red-prod-parity-signs|: reduced product of parity and signs (fb),
+  \item \verb|sign|: Cartesian sign domain (fb),
+  \item \verb|top|: a simple abstract domain where everything is top (only used for testing purposes).
+\end{itemize}
+Here (f) stands for forward analysis and (fb) stands for forward-backward analysis and indicate which of the analyses an implementation supports. Furthermore, each implementation comes with a widening and narrowing operator which can be trivial/non-trivial depending on the domain.\par
+There is a \verb|makefile| that can be used to compile and run the domains. The \verb|makefile| works by accessing one of the folders inside \verb|domains| and creating a symbolic link to the relevant files depending on what the analysis is (so which domain you wish to use). Similarly, depending on the context, the makefile accesses one of the folders inside \verb|src| and create the relevant symbolic links. Then it proceeds to compile the program using \verb|ocamlc| and outputs an executable named \verb|main|. The following commands can be used with the terminal command \verb|make|.
+\begin{itemize}
+  \item \verb|all|: run all domains 
+  \item \verb|analyseTop|: compile for top domain
+  \item \verb|analyseBotTop|: compile for bot-top domain
+  \item \verb|analyseParity|: compile for parity domain
+  \item \verb|analyseConstancy|: compile for constancy domain
+  \item \verb|analyseSign|: compile for sign domain
+  \item \verb|analyseCongruence|: compile for congruence domain
+  \item \verb|analyseOctagonApron|: compile for octagon domain with Apron library
+  \item \verb|analysePolyElina|: compile for polyehdral domain with Elina library
+  \item \verb|analyseReducedSignParity|: compile for reduced product of signs and parity
+  \item \verb|analyseReducedCongruenceInterval|: compile for reduced product of congruences and intervals
+  \item \verb|analysePotentialPointsTo|: compile for potential points-to domain
+  \item \verb|analysePotentialPointsToInterval|: compile for combination of potential points-to and intervals
+\end{itemize}
+So, the format for compilation is, for example, \verb|make analyseParity| (which compiles for the parity analysis). Furthermore, the following utility commands are available.
+\begin{itemize}
+  \item \verb|help|: print all available compilation commands
+  \item \verb|delete|: delete all compilation files including \verb|main|
+  \item \verb|clean|: delete all compilation files except the symbolic links and \verb|main|
+  \item \verb|removeSys|: delete all symbolic links
+  \item \verb|removeMain|: delete the created \verb|main| executable
+\end{itemize}
+Upon compiling the interpreter will run a few example programs and print out the results of the analysis. Please note that there may be some formatting issues when printing and resizing of the terminal window may be required. Any printer file can be modified by navigating to the \verb|domains| folder and selecting from the available folders the file that begins with \verb|printer|. Changing the variable \verb|labelmargin| could be useful to change the behavior of the printer if desired. Finally, to analyze more programs use the following command in the terminal after compiling a domain.
+\begin{itemize}
+  \item \verb=echo "your_program" | ./main=: where the string \verb|"your_program"| is a valid program whose syntax is as defined in the lecture notes (can be no pointer or pointer language depending on which domain is compiled)
+\end{itemize}
+The program has been written using version 4.06 of OCaml and tested on macOS Mojave. Furthermore, if using the Apron or Elina library the following libraries are needed: \verb|apron|, \verb|camlidl|, \verb|conf-gmp|, \verb|conf-m4|, \verb|conf-mpfr|, \verb|conf-ppl|, \verb|elina|, \verb|mlgmpidl|, and \verb|ocamlfind|. All libraries can be installed using the \verb|opam| package manager. Furthermore, you will need the \verb|gcc| compiler for ANSI C, the \verb|GMP| C library, the GNU m4 library and the \verb|MPFR| C library. These can all be installed by installing XCode and/or using \verb|brew|.\par
+Please note that while the programs have been tested and debugged there may still be minor issues with the implementation logic. Please report all bugs to \verb|gs2417@nyu.edu| so that they may be fixed. Furthermore, the implementation of the combination of the potential points-to and intervals may contain bigger issues due to the author's doubts when implementing this domain. Again, please report any issues to the above given email address. Also, note that all analyses should compile and run as they have been all tested on whether there are any compilation issues.\par
+The initial files of \verb|abstractDomain.mli|, \verb|abstractSyntax.ml|, \verb|abstractSyntaxExpressions.ml|, \\\verb|abstractTree.ml|, \verb|abstractTree.mli|, \verb|lexer.mll|, \verb|parser.mly|, \verb|abstractDomainParity.ml| and \\\verb|printerParity.ml| in the folders \verb|src/no-ptr| and \verb|domains/parity| have been provided by Prof. Cousot. All other files including changes to the aforementioned files have been implemented by Goktug Saatcioglu.
+
+\end{document}
+
+
+
+
+
+
+
+

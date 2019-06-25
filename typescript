@@ -1,0 +1,693 @@
+Script started on Sun Oct 22 20:10:35 2017
+[?1034hbash-3.2$ make
+*** top domain
+# using the abstract interpreter:
+<l1: T ; l2: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: ; 
+                                                             l2: 
+<l1: T ; l2: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = 42; 
+                                                             l2: 
+Error: no break allowed out of a program
+<l1: T ; l2: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; tt; l2: T >                                    l1: break; 
+                                                             l2: 
+Error: no break allowed out of a program
+<l1: T ; l3: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; tt; l3: T >                                    l1: break; 
+<l2: T ; l3: T ; ff; l0: T >                                    l2: x = 7; 
+                                                             l3: 
+Error: no break allowed out of a program
+<l1: T ; l4: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = 7; 
+<l2: T ; l3: T ; ff; l0: T >                                    l2: ; 
+<l3: T ; l4: T ; tt; l4: T >                                    l3: break; 
+                                                             l4: 
+<l1: T ; l1: T ; ff; l0: T >                                 Prog:
+<l1: T ; l1: T ; ff; l0: T >                                    Stmtlist: {
+                                                                } 
+                                                             l1: 
+<l1: T ; l2: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = (((0 - 10) - 20) - (0 - 40)); 
+                                                             l2: 
+<l1: T ; l3: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = 1; 
+<l2: T ; l3: T ; ff; l0: T >                                    l2: y = 2; 
+                                                             l3: 
+<l1: T ; l4: T ; ff; l0: T >                                 Prog:
+<l1: T ; l4: T ; ff; l0: T >                                    Stmtlist: {
+<l1: T ; l2: T ; ff; l0: T >                                       l1: x = 10; 
+<l2: T ; l3: T ; ff; l0: T >                                       l2: ; 
+<l3: T ; l4: T ; ff; l0: T >                                       l3: y = 20; 
+                                                                } 
+                                                             l4: 
+<l1: T ; l3: T ; ff; l0: T >                                 Prog:
+<l1: T ; l3: T ; ff; l0: T >                                    (if l1: ((1 - 2) < ((3 - 4) - 5))
+<l2: T ; l3: T ; ff; l0: T >                                       l2: x = (0 - x); ) 
+                                                             l3: 
+<l1: T ; l10: T ; ff; l0: T >                                Prog:
+<l1: T ; l10: T ; ff; l0: T >                                   (if l1: (x < 1)
+<l2: T ; l10: T ; ff; l0: T >                                      (if l2: (x < 0)
+<l3: T ; l10: T ; ff; l0: T >                                         l3: x = 1; 
+                                                                    else 
+<l4: T ; l10: T ; ff; l0: T >                                         (if l4: (x < 0)
+<l5: T ; l10: T ; ff; l0: T >                                            Stmtlist: {
+<l5: T ; l6: T ; ff; l0: T >                                                l5: x = 2; 
+<l6: T ; l10: T ; ff; l0: T >                                               l6: x = 3; 
+                                                                         } 
+                                                                       else 
+<l7: T ; l10: T ; ff; l0: T >                                            Stmtlist: {
+<l7: T ; l8: T ; ff; l0: T >                                                l7: x = 4; 
+<l8: T ; l9: T ; ff; l0: T >                                                l8: x = 5; 
+<l9: T ; l10: T ; ff; l0: T >                                               l9: x = 6; 
+                                                                         } ) ) ) 
+                                                             l10: 
+<l1: T ; l2: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    (while l1: (x < 1)
+<l2: T ; l1: T ; ff; l0: T >                                       Stmtlist: {
+                                                                   } ) 
+                                                             l2: 
+<l1: T ; l3: T ; ff; l0: T >                                 Prog:
+<l1: T ; l3: T ; ff; l0: T >                                    (while l1: (x < 1)
+<l2: T ; l1: T ; ff; l0: T >                                       l2: x = (x + 1); ) 
+                                                             l3: 
+<l1: T ; l3: T ; ff; l0: T >                                 Prog:
+<l1: T ; l3: T ; ff; l0: T >                                    (while l1: (x < 10)
+<l2: T ; l1: T ; ff; l0: T >                                       l2: x = (x + 1); ) 
+                                                             l3: 
+<l1: T ; l4: T ; ff; l0: T >                                 Prog:
+<l1: T ; l3: T ; ff; l0: T >                                    (while l1: (0 < 1)
+<l2: T ; l1: T ; ff; l0: T >                                       Stmtlist: {
+<l2: T ; l1: T ; ff; l0: T >                                          l2: x = (x - 1); 
+                                                                   } ) 
+<l3: T ; l4: T ; ff; l0: T >                                    l3: x = 42; 
+                                                             l4: 
+<l1: T ; l2: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    (while l1: (0 < 1)
+<l2: T ; l1: T ; ff; l0: T >                                       Stmtlist: {
+                                                                   } ) 
+                                                             l2: 
+<l1: T ; l7: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = (x - 1); 
+<l2: T ; l6: T ; ff; l0: T >                                    (while l2: (0 < 1)
+<l3: T ; l2: T ; tt; l6: T >                                       Stmtlist: {
+<l3: T ; l4: T ; ff; l0: T >                                          l3: x = (x - 1); 
+<l4: T ; l2: T ; tt; l6: T >                                          (if l4: (x < 2)
+<l5: T ; l2: T ; tt; l6: T >                                             l5: break; ) 
+                                                                   } ) 
+<l6: T ; l7: T ; ff; l0: T >                                    l6: ; 
+                                                             l7: 
+<l1: T ; l6: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = (0 - 10); 
+<l2: T ; l6: T ; ff; l0: T >                                    (while l2: (x < 0)
+<l3: T ; l2: T ; ff; l0: T >                                       (if l3: (x < 0)
+<l4: T ; l2: T ; ff; l0: T >                                          (if l4: (0 < x)
+<l5: T ; l2: T ; ff; l0: T >                                             l5: x = (0 - x); ) ) ) 
+                                                             l6: 
+<l1: T ; l7: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = (0 - 10); 
+<l2: T ; l5: T ; ff; l0: T >                                    (while l2: (x < 0)
+<l3: T ; l2: T ; tt; l5: T >                                       Stmtlist: {
+<l3: T ; l4: T ; ff; l0: T >                                          l3: x = (x - 1); 
+<l4: T ; l2: T ; tt; l5: T >                                          l4: break; 
+                                                                   } ) 
+<l5: T ; l6: T ; ff; l0: T >                                    l5: ; 
+<l6: T ; l7: T ; ff; l0: T >                                    l6: x = 10; 
+                                                             l7: 
+<l1: T ; l8: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = 0; 
+<l2: T ; l6: T ; ff; l0: T >                                    (while l2: (x < 0)
+<l3: T ; l2: T ; ff; l0: T >                                       Stmtlist: {
+<l3: T ; l5: T ; ff; l0: T >                                          (while l3: (x < 0)
+<l4: T ; l3: T ; ff; l0: T >                                             l4: x = (x - 1); ) 
+<l5: T ; l2: T ; ff; l0: T >                                          l5: x = 10; 
+                                                                   } ) 
+<l6: T ; l7: T ; ff; l0: T >                                    l6: ; 
+<l7: T ; l8: T ; ff; l0: T >                                    l7: x = 100; 
+                                                             l8: 
+<l1: T ; l8: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = 0; 
+<l2: T ; l6: T ; ff; l0: T >                                    (while l2: (x < 0)
+<l3: T ; l2: T ; tt; l6: T >                                       Stmtlist: {
+<l3: T ; l5: T ; ff; l0: T >                                          (while l3: (x < 0)
+<l4: T ; l3: T ; ff; l0: T >                                             l4: x = (x - 1); ) 
+<l5: T ; l2: T ; tt; l6: T >                                          l5: break; 
+                                                                   } ) 
+<l6: T ; l7: T ; ff; l0: T >                                    l6: ; 
+<l7: T ; l8: T ; ff; l0: T >                                    l7: x = 100; 
+                                                             l8: 
+<l1: T ; l7: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = (x - 1); 
+<l2: T ; l6: T ; ff; l0: T >                                    (while l2: (0 < 1)
+<l3: T ; l2: T ; tt; l6: T >                                       Stmtlist: {
+<l3: T ; l4: T ; ff; l0: T >                                          l3: x = (x - 1); 
+<l4: T ; l2: T ; tt; l6: T >                                          (if l4: (2 < x)
+<l5: T ; l2: T ; tt; l6: T >                                             l5: break; ) 
+                                                                   } ) 
+<l6: T ; l7: T ; ff; l0: T >                                    l6: ; 
+                                                             l7: 
+<l1: T ; l4: T ; ff; l0: T >                                 Prog:
+<l1: T ; l2: T ; ff; l0: T >                                    l1: x = 10; 
+<l2: T ; l4: T ; ff; l0: T >                                    (while l2: (x > 0)
+<l3: T ; l2: T ; ff; l0: T >                                       l3: x = (x - 1); ) 
+                                                             l4: 
+<l1: T ; l4: T ; ff; l0: T >                                 Prog:
+<l1: T ; l4: T ; ff; l0: T >                                    (while l1: (0 < 1)
+<l2: T ; l1: T ; tt; l4: T >                                       Stmtlist: {
+<l2: T ; l3: T ; tt; l4: T >                                          l2: break; 
+<l3: T ; l1: T ; ff; l0: T >                                          l3: x = 1; 
+                                                                   } ) 
+                                                             l4: 
+<l1: T ; l6: T ; ff; l0: T >                                 Prog:
+<l1: T ; l6: T ; ff; l0: T >                                    (while l1: (x != 2)
+<l2: T ; l1: T ; tt; l6: T >                                       Stmtlist: {
+<l2: T ; l4: T ; tt; l6: T >                                          (if l2: (x == 0)
+<l3: T ; l4: T ; tt; l6: T >                                             l3: break; ) 
+<l4: T ; l1: T ; tt; l6: T >                                          (if l4: (x == 1)
+<l5: T ; l1: T ; tt; l6: T >                                             l5: break; ) 
+                                                                   } ) 
+                                                             l6: 
+<l1: T ; l3: T ; ff; l0: T >                                 Prog:
+<l1: T ; l3: T ; ff; l0: T >                                    (while l1: (0 < 1)
+<l2: T ; l1: T ; ff; l0: T >                                       l2: x = (x + 2); ) 
+                                                             l3: 
+# end
+*** bot/top domain
+# using the abstract interpreter:
+<l1: T ; l2: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: ; 
+                                                             l2: 
+<l1: T ; l2: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = 42; 
+                                                             l2: 
+Error: no break allowed out of a program
+<l1: T ; l2:_|_; ff; l0:_|_>                                 Prog:
+<l1: T ; l2:_|_; tt; l2: T >                                    l1: break; 
+                                                             l2: 
+Error: no break allowed out of a program
+<l1: T ; l3:_|_; ff; l0:_|_>                                 Prog:
+<l1: T ; l2:_|_; tt; l3: T >                                    l1: break; 
+<l2:_|_; l3:_|_; ff; l0:_|_>                                    l2: x = 7; 
+                                                             l3: 
+Error: no break allowed out of a program
+<l1: T ; l4:_|_; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = 7; 
+<l2: T ; l3: T ; ff; l0:_|_>                                    l2: ; 
+<l3: T ; l4:_|_; tt; l4: T >                                    l3: break; 
+                                                             l4: 
+<l1: T ; l1: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l1: T ; ff; l0:_|_>                                    Stmtlist: {
+                                                                } 
+                                                             l1: 
+<l1: T ; l2: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = (((0 - 10) - 20) - (0 - 40)); 
+                                                             l2: 
+<l1: T ; l3: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = 1; 
+<l2: T ; l3: T ; ff; l0:_|_>                                    l2: y = 2; 
+                                                             l3: 
+<l1: T ; l4: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l4: T ; ff; l0:_|_>                                    Stmtlist: {
+<l1: T ; l2: T ; ff; l0:_|_>                                       l1: x = 10; 
+<l2: T ; l3: T ; ff; l0:_|_>                                       l2: ; 
+<l3: T ; l4: T ; ff; l0:_|_>                                       l3: y = 20; 
+                                                                } 
+                                                             l4: 
+<l1: T ; l3: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l3: T ; ff; l0:_|_>                                    (if l1: ((1 - 2) < ((3 - 4) - 5))
+<l2: T ; l3: T ; ff; l0:_|_>                                       l2: x = (0 - x); ) 
+                                                             l3: 
+<l1: T ; l10: T ; ff; l0:_|_>                                Prog:
+<l1: T ; l10: T ; ff; l0:_|_>                                   (if l1: (x < 1)
+<l2: T ; l10: T ; ff; l0:_|_>                                      (if l2: (x < 0)
+<l3: T ; l10: T ; ff; l0:_|_>                                         l3: x = 1; 
+                                                                    else 
+<l4: T ; l10: T ; ff; l0:_|_>                                         (if l4: (x < 0)
+<l5: T ; l10: T ; ff; l0:_|_>                                            Stmtlist: {
+<l5: T ; l6: T ; ff; l0:_|_>                                                l5: x = 2; 
+<l6: T ; l10: T ; ff; l0:_|_>                                               l6: x = 3; 
+                                                                         } 
+                                                                       else 
+<l7: T ; l10: T ; ff; l0:_|_>                                            Stmtlist: {
+<l7: T ; l8: T ; ff; l0:_|_>                                                l7: x = 4; 
+<l8: T ; l9: T ; ff; l0:_|_>                                                l8: x = 5; 
+<l9: T ; l10: T ; ff; l0:_|_>                                               l9: x = 6; 
+                                                                         } ) ) ) 
+                                                             l10: 
+<l1: T ; l2: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    (while l1: (x < 1)
+<l2: T ; l1: T ; ff; l0:_|_>                                       Stmtlist: {
+                                                                   } ) 
+                                                             l2: 
+<l1: T ; l3: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l3: T ; ff; l0:_|_>                                    (while l1: (x < 1)
+<l2: T ; l1: T ; ff; l0:_|_>                                       l2: x = (x + 1); ) 
+                                                             l3: 
+<l1: T ; l3: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l3: T ; ff; l0:_|_>                                    (while l1: (x < 10)
+<l2: T ; l1: T ; ff; l0:_|_>                                       l2: x = (x + 1); ) 
+                                                             l3: 
+<l1: T ; l4: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l3: T ; ff; l0:_|_>                                    (while l1: (0 < 1)
+<l2: T ; l1: T ; ff; l0:_|_>                                       Stmtlist: {
+<l2: T ; l1: T ; ff; l0:_|_>                                          l2: x = (x - 1); 
+                                                                   } ) 
+<l3: T ; l4: T ; ff; l0:_|_>                                    l3: x = 42; 
+                                                             l4: 
+<l1: T ; l2: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    (while l1: (0 < 1)
+<l2: T ; l1: T ; ff; l0:_|_>                                       Stmtlist: {
+                                                                   } ) 
+                                                             l2: 
+<l1: T ; l7: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = (x - 1); 
+<l2: T ; l6: T ; ff; l0:_|_>                                    (while l2: (0 < 1)
+<l3: T ; l2: T ; tt; l6: T >                                       Stmtlist: {
+<l3: T ; l4: T ; ff; l0:_|_>                                          l3: x = (x - 1); 
+<l4: T ; l2: T ; tt; l6: T >                                          (if l4: (x < 2)
+<l5: T ; l2:_|_; tt; l6: T >                                             l5: break; ) 
+                                                                   } ) 
+<l6: T ; l7: T ; ff; l0:_|_>                                    l6: ; 
+                                                             l7: 
+<l1: T ; l6: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = (0 - 10); 
+<l2: T ; l6: T ; ff; l0:_|_>                                    (while l2: (x < 0)
+<l3: T ; l2: T ; ff; l0:_|_>                                       (if l3: (x < 0)
+<l4: T ; l2: T ; ff; l0:_|_>                                          (if l4: (0 < x)
+<l5: T ; l2: T ; ff; l0:_|_>                                             l5: x = (0 - x); ) ) ) 
+                                                             l6: 
+<l1: T ; l7: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = (0 - 10); 
+<l2: T ; l5: T ; ff; l0:_|_>                                    (while l2: (x < 0)
+<l3: T ; l2:_|_; tt; l5: T >                                       Stmtlist: {
+<l3: T ; l4: T ; ff; l0:_|_>                                          l3: x = (x - 1); 
+<l4: T ; l2:_|_; tt; l5: T >                                          l4: break; 
+                                                                   } ) 
+<l5: T ; l6: T ; ff; l0:_|_>                                    l5: ; 
+<l6: T ; l7: T ; ff; l0:_|_>                                    l6: x = 10; 
+                                                             l7: 
+<l1: T ; l8: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = 0; 
+<l2: T ; l6: T ; ff; l0:_|_>                                    (while l2: (x < 0)
+<l3: T ; l2: T ; ff; l0:_|_>                                       Stmtlist: {
+<l3: T ; l5: T ; ff; l0:_|_>                                          (while l3: (x < 0)
+<l4: T ; l3: T ; ff; l0:_|_>                                             l4: x = (x - 1); ) 
+<l5: T ; l2: T ; ff; l0:_|_>                                          l5: x = 10; 
+                                                                   } ) 
+<l6: T ; l7: T ; ff; l0:_|_>                                    l6: ; 
+<l7: T ; l8: T ; ff; l0:_|_>                                    l7: x = 100; 
+                                                             l8: 
+<l1: T ; l8: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = 0; 
+<l2: T ; l6: T ; ff; l0:_|_>                                    (while l2: (x < 0)
+<l3: T ; l2:_|_; tt; l6: T >                                       Stmtlist: {
+<l3: T ; l5: T ; ff; l0:_|_>                                          (while l3: (x < 0)
+<l4: T ; l3: T ; ff; l0:_|_>                                             l4: x = (x - 1); ) 
+<l5: T ; l2:_|_; tt; l6: T >                                          l5: break; 
+                                                                   } ) 
+<l6: T ; l7: T ; ff; l0:_|_>                                    l6: ; 
+<l7: T ; l8: T ; ff; l0:_|_>                                    l7: x = 100; 
+                                                             l8: 
+<l1: T ; l7: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = (x - 1); 
+<l2: T ; l6: T ; ff; l0:_|_>                                    (while l2: (0 < 1)
+<l3: T ; l2: T ; tt; l6: T >                                       Stmtlist: {
+<l3: T ; l4: T ; ff; l0:_|_>                                          l3: x = (x - 1); 
+<l4: T ; l2: T ; tt; l6: T >                                          (if l4: (2 < x)
+<l5: T ; l2:_|_; tt; l6: T >                                             l5: break; ) 
+                                                                   } ) 
+<l6: T ; l7: T ; ff; l0:_|_>                                    l6: ; 
+                                                             l7: 
+<l1: T ; l4: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l2: T ; ff; l0:_|_>                                    l1: x = 10; 
+<l2: T ; l4: T ; ff; l0:_|_>                                    (while l2: (x > 0)
+<l3: T ; l2: T ; ff; l0:_|_>                                       l3: x = (x - 1); ) 
+                                                             l4: 
+<l1: T ; l4: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l4: T ; ff; l0:_|_>                                    (while l1: (0 < 1)
+<l2: T ; l1:_|_; tt; l4: T >                                       Stmtlist: {
+<l2: T ; l3:_|_; tt; l4: T >                                          l2: break; 
+<l3:_|_; l1:_|_; ff; l0:_|_>                                          l3: x = 1; 
+                                                                   } ) 
+                                                             l4: 
+<l1: T ; l6: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l6: T ; ff; l0:_|_>                                    (while l1: (x != 2)
+<l2: T ; l1: T ; tt; l6: T >                                       Stmtlist: {
+<l2: T ; l4: T ; tt; l6: T >                                          (if l2: (x == 0)
+<l3: T ; l4:_|_; tt; l6: T >                                             l3: break; ) 
+<l4: T ; l1: T ; tt; l6: T >                                          (if l4: (x == 1)
+<l5: T ; l1:_|_; tt; l6: T >                                             l5: break; ) 
+                                                                   } ) 
+                                                             l6: 
+<l1: T ; l3: T ; ff; l0:_|_>                                 Prog:
+<l1: T ; l3: T ; ff; l0:_|_>                                    (while l1: (0 < 1)
+<l2: T ; l1: T ; ff; l0:_|_>                                       l2: x = (x + 2); ) 
+                                                             l3: 
+# end
+*** parity domain
+# using the abstract interpreter:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l1: ; 
+                                                             l2: 
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = 42; 
+                                                             l2: 
+Error: no break allowed out of a program
+<l1:x=e, y=e; l2:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>          Prog:
+<l1:x=e, y=e; l2:x=_|_, y=_|_; tt; l2:x=e, y=e>                 l1: break; 
+                                                             l2: 
+Error: no break allowed out of a program
+<l1:x=e, y=e; l3:x=o, y=_|_; ff; l0:x=_|_, y=_|_>            Prog:
+<l1:x=e, y=e; l2:x=_|_, y=_|_; tt; l3:x=e, y=e>                 l1: break; 
+<l2:x=_|_, y=_|_; l3:x=o, y=_|_; ff; l0:x=_|_, y=_|_>           l2: x = 7; 
+                                                             l3: 
+Error: no break allowed out of a program
+<l1:x=e, y=e; l4:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>          Prog:
+<l1:x=e, y=e; l2:x=o, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = 7; 
+<l2:x=o, y=e; l3:x=o, y=e; ff; l0:x=_|_, y=_|_>                 l2: ; 
+<l3:x=o, y=e; l4:x=_|_, y=_|_; tt; l4:x=o, y=e>                 l3: break; 
+                                                             l4: 
+<l1:x=e, y=e; l1:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l1:x=e, y=e; ff; l0:x=_|_, y=_|_>                 Stmtlist: {
+                                                                } 
+                                                             l1: 
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = (((0 - 10) - 20) - (0 - 40)); 
+                                                             l2: 
+<l1:x=e, y=e; l3:x=o, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=o, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = 1; 
+<l2:x=o, y=e; l3:x=o, y=e; ff; l0:x=_|_, y=_|_>                 l2: y = 2; 
+                                                             l3: 
+<l1:x=e, y=e; l4:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l4:x=e, y=e; ff; l0:x=_|_, y=_|_>                 Stmtlist: {
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                    l1: x = 10; 
+<l2:x=e, y=e; l3:x=e, y=e; ff; l0:x=_|_, y=_|_>                    l2: ; 
+<l3:x=e, y=e; l4:x=e, y=e; ff; l0:x=_|_, y=_|_>                    l3: y = 20; 
+                                                                } 
+                                                             l4: 
+<l1:x=e, y=e; l3:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l3:x=e, y=e; ff; l0:x=_|_, y=_|_>                 (if l1: ((1 - 2) < ((3 - 4) - 5))
+<l2:x=e, y=e; l3:x=e, y=e; ff; l0:x=_|_, y=_|_>                    l2: x = (0 - x); ) 
+                                                             l3: 
+<l1:x=e, y=e; l10:x=T, y=e; ff; l0:x=_|_, y=_|_>             Prog:
+<l1:x=e, y=e; l10:x=T, y=e; ff; l0:x=_|_, y=_|_>                (if l1: (x < 1)
+<l2:x=e, y=e; l10:x=T, y=e; ff; l0:x=_|_, y=_|_>                   (if l2: (x < 0)
+<l3:x=e, y=e; l10:x=o, y=e; ff; l0:x=_|_, y=_|_>                      l3: x = 1; 
+                                                                    else 
+<l4:x=e, y=e; l10:x=T, y=e; ff; l0:x=_|_, y=_|_>                      (if l4: (x < 0)
+<l5:x=e, y=e; l10:x=o, y=e; ff; l0:x=_|_, y=_|_>                         Stmtlist: {
+<l5:x=e, y=e; l6:x=e, y=e; ff; l0:x=_|_, y=_|_>                             l5: x = 2; 
+<l6:x=e, y=e; l10:x=o, y=e; ff; l0:x=_|_, y=_|_>                            l6: x = 3; 
+                                                                         } 
+                                                                       else 
+<l7:x=e, y=e; l10:x=e, y=e; ff; l0:x=_|_, y=_|_>                         Stmtlist: {
+<l7:x=e, y=e; l8:x=e, y=e; ff; l0:x=_|_, y=_|_>                             l7: x = 4; 
+<l8:x=e, y=e; l9:x=o, y=e; ff; l0:x=_|_, y=_|_>                             l8: x = 5; 
+<l9:x=o, y=e; l10:x=e, y=e; ff; l0:x=_|_, y=_|_>                            l9: x = 6; 
+                                                                         } ) ) ) 
+                                                             l10: 
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                 (while l1: (x < 1)
+<l2:x=e, y=e; l1:x=e, y=e; ff; l0:x=_|_, y=_|_>                    Stmtlist: {
+                                                                   } ) 
+                                                             l2: 
+<l1:x=T, y=e; l3:x=T, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=T, y=e; l3:x=T, y=e; ff; l0:x=_|_, y=_|_>                 (while l1: (x < 1)
+<l2:x=T, y=e; l1:x=T, y=e; ff; l0:x=_|_, y=_|_>                    l2: x = (x + 1); ) 
+                                                             l3: 
+<l1:x=T, y=e; l3:x=T, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=T, y=e; l3:x=T, y=e; ff; l0:x=_|_, y=_|_>                 (while l1: (x < 10)
+<l2:x=T, y=e; l1:x=T, y=e; ff; l0:x=_|_, y=_|_>                    l2: x = (x + 1); ) 
+                                                             l3: 
+<l1:x=T, y=e; l4:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=T, y=e; l3:x=T, y=e; ff; l0:x=_|_, y=_|_>                 (while l1: (0 < 1)
+<l2:x=T, y=e; l1:x=T, y=e; ff; l0:x=_|_, y=_|_>                    Stmtlist: {
+<l2:x=T, y=e; l1:x=T, y=e; ff; l0:x=_|_, y=_|_>                       l2: x = (x - 1); 
+                                                                   } ) 
+<l3:x=T, y=e; l4:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l3: x = 42; 
+                                                             l4: 
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                 (while l1: (0 < 1)
+<l2:x=e, y=e; l1:x=e, y=e; ff; l0:x=_|_, y=_|_>                    Stmtlist: {
+                                                                   } ) 
+                                                             l2: 
+<l1:x=e, y=e; l7:x=T, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=o, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = (x - 1); 
+<l2:x=T, y=e; l6:x=T, y=e; ff; l0:x=_|_, y=_|_>                 (while l2: (0 < 1)
+<l3:x=T, y=e; l2:x=T, y=e; tt; l6:x=T, y=e>                        Stmtlist: {
+<l3:x=T, y=e; l4:x=T, y=e; ff; l0:x=_|_, y=_|_>                       l3: x = (x - 1); 
+<l4:x=T, y=e; l2:x=T, y=e; tt; l6:x=T, y=e>                           (if l4: (x < 2)
+<l5:x=T, y=e; l2:x=_|_, y=_|_; tt; l6:x=T, y=e>                          l5: break; ) 
+                                                                   } ) 
+<l6:x=T, y=e; l7:x=T, y=e; ff; l0:x=_|_, y=_|_>                 l6: ; 
+                                                             l7: 
+<l1:x=e, y=e; l6:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = (0 - 10); 
+<l2:x=e, y=e; l6:x=e, y=e; ff; l0:x=_|_, y=_|_>                 (while l2: (x < 0)
+<l3:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                    (if l3: (x < 0)
+<l4:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                       (if l4: (0 < x)
+<l5:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                          l5: x = (0 - x); ) ) ) 
+                                                             l6: 
+<l1:x=e, y=e; l7:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = (0 - 10); 
+<l2:x=e, y=e; l5:x=T, y=e; ff; l0:x=_|_, y=_|_>                 (while l2: (x < 0)
+<l3:x=e, y=e; l2:x=_|_, y=_|_; tt; l5:x=o, y=e>                    Stmtlist: {
+<l3:x=e, y=e; l4:x=o, y=e; ff; l0:x=_|_, y=_|_>                       l3: x = (x - 1); 
+<l4:x=o, y=e; l2:x=_|_, y=_|_; tt; l5:x=o, y=e>                       l4: break; 
+                                                                   } ) 
+<l5:x=T, y=e; l6:x=T, y=e; ff; l0:x=_|_, y=_|_>                 l5: ; 
+<l6:x=T, y=e; l7:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l6: x = 10; 
+                                                             l7: 
+<l1:x=e, y=e; l8:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = 0; 
+<l2:x=e, y=e; l6:x=e, y=e; ff; l0:x=_|_, y=_|_>                 (while l2: (x < 0)
+<l3:x=T, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                    Stmtlist: {
+<l3:x=T, y=e; l5:x=T, y=e; ff; l0:x=_|_, y=_|_>                       (while l3: (x < 0)
+<l4:x=T, y=e; l3:x=T, y=e; ff; l0:x=_|_, y=_|_>                          l4: x = (x - 1); ) 
+<l5:x=T, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                       l5: x = 10; 
+                                                                   } ) 
+<l6:x=e, y=e; l7:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l6: ; 
+<l7:x=e, y=e; l8:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l7: x = 100; 
+                                                             l8: 
+<l1:x=e, y=e; l8:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = 0; 
+<l2:x=e, y=e; l6:x=T, y=e; ff; l0:x=_|_, y=_|_>                 (while l2: (x < 0)
+<l3:x=T, y=e; l2:x=_|_, y=_|_; tt; l6:x=T, y=e>                    Stmtlist: {
+<l3:x=T, y=e; l5:x=T, y=e; ff; l0:x=_|_, y=_|_>                       (while l3: (x < 0)
+<l4:x=T, y=e; l3:x=T, y=e; ff; l0:x=_|_, y=_|_>                          l4: x = (x - 1); ) 
+<l5:x=T, y=e; l2:x=_|_, y=_|_; tt; l6:x=T, y=e>                       l5: break; 
+                                                                   } ) 
+<l6:x=T, y=e; l7:x=T, y=e; ff; l0:x=_|_, y=_|_>                 l6: ; 
+<l7:x=T, y=e; l8:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l7: x = 100; 
+                                                             l8: 
+<l1:x=e, y=e; l7:x=T, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=o, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = (x - 1); 
+<l2:x=T, y=e; l6:x=T, y=e; ff; l0:x=_|_, y=_|_>                 (while l2: (0 < 1)
+<l3:x=T, y=e; l2:x=T, y=e; tt; l6:x=T, y=e>                        Stmtlist: {
+<l3:x=T, y=e; l4:x=T, y=e; ff; l0:x=_|_, y=_|_>                       l3: x = (x - 1); 
+<l4:x=T, y=e; l2:x=T, y=e; tt; l6:x=T, y=e>                           (if l4: (2 < x)
+<l5:x=T, y=e; l2:x=_|_, y=_|_; tt; l6:x=T, y=e>                          l5: break; ) 
+                                                                   } ) 
+<l6:x=T, y=e; l7:x=T, y=e; ff; l0:x=_|_, y=_|_>                 l6: ; 
+                                                             l7: 
+<l1:x=e, y=e; l4:x=T, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l2:x=e, y=e; ff; l0:x=_|_, y=_|_>                 l1: x = 10; 
+<l2:x=T, y=e; l4:x=T, y=e; ff; l0:x=_|_, y=_|_>                 (while l2: (x > 0)
+<l3:x=T, y=e; l2:x=T, y=e; ff; l0:x=_|_, y=_|_>                    l3: x = (x - 1); ) 
+                                                             l4: 
+<l1:x=T, y=e; l4:x=T, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=T, y=e; l4:x=T, y=e; ff; l0:x=_|_, y=_|_>                 (while l1: (0 < 1)
+<l2:x=T, y=e; l1:x=o, y=_|_; tt; l4:x=T, y=e>                      Stmtlist: {
+<l2:x=T, y=e; l3:x=_|_, y=_|_; tt; l4:x=T, y=e>                       l2: break; 
+<l3:x=_|_, y=_|_; l1:x=o, y=_|_; ff; l0:x=_|_, y=_|_>                 l3: x = 1; 
+                                                                   } ) 
+                                                             l4: 
+<l1:x=e, y=e; l6:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l6:x=e, y=e; ff; l0:x=_|_, y=_|_>                 (while l1: (x != 2)
+<l2:x=e, y=e; l1:x=e, y=e; tt; l6:x=e, y=e>                        Stmtlist: {
+<l2:x=e, y=e; l4:x=e, y=e; tt; l6:x=e, y=e>                           (if l2: (x == 0)
+<l3:x=e, y=e; l4:x=_|_, y=_|_; tt; l6:x=e, y=e>                          l3: break; ) 
+<l4:x=e, y=e; l1:x=e, y=e; tt; l6:x=_|_, y=_|_>                       (if l4: (x == 1)
+<l5:x=_|_, y=_|_; l1:x=_|_, y=_|_; tt; l6:x=_|_, y=_|_>                  l5: break; ) 
+                                                                   } ) 
+                                                             l6: 
+<l1:x=e, y=e; l3:x=e, y=e; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=e, y=e; l3:x=e, y=e; ff; l0:x=_|_, y=_|_>                 (while l1: (0 < 1)
+<l2:x=e, y=e; l1:x=e, y=e; ff; l0:x=_|_, y=_|_>                    l2: x = (x + 2); ) 
+                                                             l3: 
+# end
+*** constancy domain
+# using the abstract interpreter:
+<l1:x=0, y=0; l2:x=0, y=0; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=0, y=0; l2:x=0, y=0; ff; l0:x=_|_, y=_|_>                 l1: ; 
+                                                             l2: 
+<l1:x=0, y=0; l2:x=42, y=0; ff; l0:x=_|_, y=_|_>             Prog:
+<l1:x=0, y=0; l2:x=42, y=0; ff; l0:x=_|_, y=_|_>                l1: x = 42; 
+                                                             l2: 
+Error: no break allowed out of a program
+<l1:x=0, y=0; l2:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>          Prog:
+<l1:x=0, y=0; l2:x=_|_, y=_|_; tt; l2:x=0, y=0>                 l1: break; 
+                                                             l2: 
+Error: no break allowed out of a program
+<l1:x=0, y=0; l3:x=7, y=_|_; ff; l0:x=_|_, y=_|_>            Prog:
+<l1:x=0, y=0; l2:x=_|_, y=_|_; tt; l3:x=0, y=0>                 l1: break; 
+<l2:x=_|_, y=_|_; l3:x=7, y=_|_; ff; l0:x=_|_, y=_|_>           l2: x = 7; 
+                                                             l3: 
+Error: no break allowed out of a program
+<l1:x=0, y=0; l4:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>          Prog:
+<l1:x=0, y=0; l2:x=7, y=0; ff; l0:x=_|_, y=_|_>                 l1: x = 7; 
+<l2:x=7, y=0; l3:x=7, y=0; ff; l0:x=_|_, y=_|_>                 l2: ; 
+<l3:x=7, y=0; l4:x=_|_, y=_|_; tt; l4:x=7, y=0>                 l3: break; 
+                                                             l4: 
+<l1:x=0, y=0; l1:x=0, y=0; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=0, y=0; l1:x=0, y=0; ff; l0:x=_|_, y=_|_>                 Stmtlist: {
+                                                                } 
+                                                             l1: 
+<l1:x=0, y=0; l2:x=10, y=0; ff; l0:x=_|_, y=_|_>             Prog:
+<l1:x=0, y=0; l2:x=10, y=0; ff; l0:x=_|_, y=_|_>                l1: x = (((0 - 10) - 20) - (0 - 40)); 
+                                                             l2: 
+<l1:x=0, y=0; l3:x=1, y=2; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=0, y=0; l2:x=1, y=0; ff; l0:x=_|_, y=_|_>                 l1: x = 1; 
+<l2:x=1, y=0; l3:x=1, y=2; ff; l0:x=_|_, y=_|_>                 l2: y = 2; 
+                                                             l3: 
+<l1:x=0, y=0; l4:x=10, y=20; ff; l0:x=_|_, y=_|_>            Prog:
+<l1:x=0, y=0; l4:x=10, y=20; ff; l0:x=_|_, y=_|_>               Stmtlist: {
+<l1:x=0, y=0; l2:x=10, y=0; ff; l0:x=_|_, y=_|_>                   l1: x = 10; 
+<l2:x=10, y=0; l3:x=10, y=0; ff; l0:x=_|_, y=_|_>                  l2: ; 
+<l3:x=10, y=0; l4:x=10, y=20; ff; l0:x=_|_, y=_|_>                 l3: y = 20; 
+                                                                } 
+                                                             l4: 
+<l1:x=0, y=0; l3:x=0, y=0; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=0, y=0; l3:x=0, y=0; ff; l0:x=_|_, y=_|_>                 (if l1: ((1 - 2) < ((3 - 4) - 5))
+<l2:x=_|_, y=_|_; l3:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>            l2: x = (0 - x); ) 
+                                                             l3: 
+<l1:x=0, y=0; l10:x= T , y=0; ff; l0:x=_|_, y=_|_>           Prog:
+<l1:x=0, y=0; l10:x= T , y=0; ff; l0:x=_|_, y=_|_>              (if l1: (x < 1)
+<l2:x=0, y=0; l10:x= T , y=0; ff; l0:x=_|_, y=_|_>                 (if l2: (x < 0)
+<l3:x=_|_, y=_|_; l10:x=1, y=_|_; ff; l0:x=_|_, y=_|_>                l3: x = 1; 
+                                                                    else 
+<l4:x=0, y=0; l10:x= T , y=0; ff; l0:x=_|_, y=_|_>                    (if l4: (x < 0)
+<l5:x=_|_, y=_|_; l10:x=3, y=_|_; ff; l0:x=_|_, y=_|_>                   Stmtlist: {
+<l5:x=_|_, y=_|_; l6:x=2, y=_|_; ff; l0:x=_|_, y=_|_>                       l5: x = 2; 
+<l6:x=2, y=_|_; l10:x=3, y=_|_; ff; l0:x=_|_, y=_|_>                        l6: x = 3; 
+                                                                         } 
+                                                                       else 
+<l7:x=0, y=0; l10:x=6, y=0; ff; l0:x=_|_, y=_|_>                         Stmtlist: {
+<l7:x=0, y=0; l8:x=4, y=0; ff; l0:x=_|_, y=_|_>                             l7: x = 4; 
+<l8:x=4, y=0; l9:x=5, y=0; ff; l0:x=_|_, y=_|_>                             l8: x = 5; 
+<l9:x=5, y=0; l10:x=6, y=0; ff; l0:x=_|_, y=_|_>                            l9: x = 6; 
+                                                                         } ) ) ) 
+                                                             l10: 
+<l1:x=0, y=0; l2:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>          Prog:
+<l1:x=0, y=0; l2:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>             (while l1: (x < 1)
+<l2:x=0, y=0; l1:x=0, y=0; ff; l0:x=_|_, y=_|_>                    Stmtlist: {
+                                                                   } ) 
+                                                             l2: 
+<l1:x= T , y=0; l3:x= T , y=0; ff; l0:x=_|_, y=_|_>          Prog:
+<l1:x= T , y=0; l3:x= T , y=0; ff; l0:x=_|_, y=_|_>             (while l1: (x < 1)
+<l2:x= T , y=0; l1:x= T , y=0; ff; l0:x=_|_, y=_|_>                l2: x = (x + 1); ) 
+                                                             l3: 
+<l1:x= T , y=0; l3:x= T , y=0; ff; l0:x=_|_, y=_|_>          Prog:
+<l1:x= T , y=0; l3:x= T , y=0; ff; l0:x=_|_, y=_|_>             (while l1: (x < 10)
+<l2:x= T , y=0; l1:x= T , y=0; ff; l0:x=_|_, y=_|_>                l2: x = (x + 1); ) 
+                                                             l3: 
+<l1:x= T , y=0; l4:x=42, y=_|_; ff; l0:x=_|_, y=_|_>         Prog:
+<l1:x= T , y=0; l3:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>           (while l1: (0 < 1)
+<l2:x= T , y=0; l1:x= T , y=0; ff; l0:x=_|_, y=_|_>                Stmtlist: {
+<l2:x= T , y=0; l1:x= T , y=0; ff; l0:x=_|_, y=_|_>                   l2: x = (x - 1); 
+                                                                   } ) 
+<l3:x=_|_, y=_|_; l4:x=42, y=_|_; ff; l0:x=_|_, y=_|_>          l3: x = 42; 
+                                                             l4: 
+<l1:x=0, y=0; l2:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>          Prog:
+<l1:x=0, y=0; l2:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>             (while l1: (0 < 1)
+<l2:x=0, y=0; l1:x=0, y=0; ff; l0:x=_|_, y=_|_>                    Stmtlist: {
+                                                                   } ) 
+                                                             l2: 
+<l1:x=0, y=0; l7:x=-2, y=0; ff; l0:x=_|_, y=_|_>             Prog:
+<l1:x=0, y=0; l2:x=-1, y=0; ff; l0:x=_|_, y=_|_>                l1: x = (x - 1); 
+<l2:x=-1, y=0; l6:x=-2, y=0; ff; l0:x=_|_, y=_|_>               (while l2: (0 < 1)
+<l3:x=-1, y=0; l2:x=_|_, y=_|_; tt; l6:x=-2, y=0>                  Stmtlist: {
+<l3:x=-1, y=0; l4:x=-2, y=0; ff; l0:x=_|_, y=_|_>                     l3: x = (x - 1); 
+<l4:x=-2, y=0; l2:x=_|_, y=_|_; tt; l6:x=-2, y=0>                     (if l4: (x < 2)
+<l5:x=-2, y=0; l2:x=_|_, y=_|_; tt; l6:x=-2, y=0>                        l5: break; ) 
+                                                                   } ) 
+<l6:x=-2, y=0; l7:x=-2, y=0; ff; l0:x=_|_, y=_|_>               l6: ; 
+                                                             l7: 
+<l1:x=0, y=0; l6:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>          Prog:
+<l1:x=0, y=0; l2:x=-10, y=0; ff; l0:x=_|_, y=_|_>               l1: x = (0 - 10); 
+<l2:x=-10, y=0; l6:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>           (while l2: (x < 0)
+<l3:x=-10, y=0; l2:x=-10, y=0; ff; l0:x=_|_, y=_|_>                (if l3: (x < 0)
+<l4:x=-10, y=0; l2:x=-10, y=0; ff; l0:x=_|_, y=_|_>                   (if l4: (0 < x)
+<l5:x=_|_, y=_|_; l2:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>                  l5: x = (0 - x); ) ) ) 
+                                                             l6: 
+<l1:x=0, y=0; l7:x=10, y=0; ff; l0:x=_|_, y=_|_>             Prog:
+<l1:x=0, y=0; l2:x=-10, y=0; ff; l0:x=_|_, y=_|_>               l1: x = (0 - 10); 
+<l2:x=-10, y=0; l5:x=-11, y=0; ff; l0:x=_|_, y=_|_>             (while l2: (x < 0)
+<l3:x=-10, y=0; l2:x=_|_, y=_|_; tt; l5:x=-11, y=0>                Stmtlist: {
+<l3:x=-10, y=0; l4:x=-11, y=0; ff; l0:x=_|_, y=_|_>                   l3: x = (x - 1); 
+<l4:x=-11, y=0; l2:x=_|_, y=_|_; tt; l5:x=-11, y=0>                   l4: break; 
+                                                                   } ) 
+<l5:x=-11, y=0; l6:x=-11, y=0; ff; l0:x=_|_, y=_|_>             l5: ; 
+<l6:x=-11, y=0; l7:x=10, y=0; ff; l0:x=_|_, y=_|_>              l6: x = 10; 
+                                                             l7: 
+<l1:x=0, y=0; l8:x=100, y=0; ff; l0:x=_|_, y=_|_>            Prog:
+<l1:x=0, y=0; l2:x=0, y=0; ff; l0:x=_|_, y=_|_>                 l1: x = 0; 
+<l2:x= T , y=0; l6:x= T , y=0; ff; l0:x=_|_, y=_|_>             (while l2: (x < 0)
+<l3:x= T , y=0; l2:x=10, y=0; ff; l0:x=_|_, y=_|_>                 Stmtlist: {
+<l3:x= T , y=0; l5:x= T , y=0; ff; l0:x=_|_, y=_|_>                   (while l3: (x < 0)
+<l4:x= T , y=0; l3:x= T , y=0; ff; l0:x=_|_, y=_|_>                      l4: x = (x - 1); ) 
+<l5:x= T , y=0; l2:x=10, y=0; ff; l0:x=_|_, y=_|_>                    l5: x = 10; 
+                                                                   } ) 
+<l6:x= T , y=0; l7:x= T , y=0; ff; l0:x=_|_, y=_|_>             l6: ; 
+<l7:x= T , y=0; l8:x=100, y=0; ff; l0:x=_|_, y=_|_>             l7: x = 100; 
+                                                             l8: 
+<l1:x=0, y=0; l8:x=100, y=0; ff; l0:x=_|_, y=_|_>            Prog:
+<l1:x=0, y=0; l2:x=0, y=0; ff; l0:x=_|_, y=_|_>                 l1: x = 0; 
+<l2:x=0, y=0; l6:x=0, y=0; ff; l0:x=_|_, y=_|_>                 (while l2: (x < 0)
+<l3:x=_|_, y=_|_; l2:x=_|_, y=_|_; tt; l6:x=_|_, y=_|_>            Stmtlist: {
+<l3:x=_|_, y=_|_; l5:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>               (while l3: (x < 0)
+<l4:x=_|_, y=_|_; l3:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>                  l4: x = (x - 1); ) 
+<l5:x=_|_, y=_|_; l2:x=_|_, y=_|_; tt; l6:x=_|_, y=_|_>               l5: break; 
+                                                                   } ) 
+<l6:x=0, y=0; l7:x=0, y=0; ff; l0:x=_|_, y=_|_>                 l6: ; 
+<l7:x=0, y=0; l8:x=100, y=0; ff; l0:x=_|_, y=_|_>               l7: x = 100; 
+                                                             l8: 
+<l1:x=0, y=0; l7:x= T , y=0; ff; l0:x=_|_, y=_|_>            Prog:
+<l1:x=0, y=0; l2:x=-1, y=0; ff; l0:x=_|_, y=_|_>                l1: x = (x - 1); 
+<l2:x= T , y=0; l6:x= T , y=0; ff; l0:x=_|_, y=_|_>             (while l2: (0 < 1)
+<l3:x= T , y=0; l2:x= T , y=0; tt; l6:x= T , y=0>                  Stmtlist: {
+<l3:x= T , y=0; l4:x= T , y=0; ff; l0:x=_|_, y=_|_>                   l3: x = (x - 1); 
+<l4:x= T , y=0; l2:x= T , y=0; tt; l6:x= T , y=0>                     (if l4: (2 < x)
+<l5:x= T , y=0; l2:x=_|_, y=_|_; tt; l6:x= T , y=0>                      l5: break; ) 
+                                                                   } ) 
+<l6:x= T , y=0; l7:x= T , y=0; ff; l0:x=_|_, y=_|_>             l6: ; 
+                                                             l7: 
+<l1:x=0, y=0; l4:x= T , y=0; ff; l0:x=_|_, y=_|_>            Prog:
+<l1:x=0, y=0; l2:x=10, y=0; ff; l0:x=_|_, y=_|_>                l1: x = 10; 
+<l2:x= T , y=0; l4:x= T , y=0; ff; l0:x=_|_, y=_|_>             (while l2: (x > 0)
+<l3:x= T , y=0; l2:x= T , y=0; ff; l0:x=_|_, y=_|_>                l3: x = (x - 1); ) 
+                                                             l4: 
+<l1:x= T , y=0; l4:x= T , y=0; ff; l0:x=_|_, y=_|_>          Prog:
+<l1:x= T , y=0; l4:x= T , y=0; ff; l0:x=_|_, y=_|_>             (while l1: (0 < 1)
+<l2:x= T , y=0; l1:x=1, y=_|_; tt; l4:x= T , y=0>                  Stmtlist: {
+<l2:x= T , y=0; l3:x=_|_, y=_|_; tt; l4:x= T , y=0>                   l2: break; 
+<l3:x=_|_, y=_|_; l1:x=1, y=_|_; ff; l0:x=_|_, y=_|_>                 l3: x = 1; 
+                                                                   } ) 
+                                                             l4: 
+<l1:x=0, y=0; l6:x=0, y=0; ff; l0:x=_|_, y=_|_>              Prog:
+<l1:x=0, y=0; l6:x=0, y=0; ff; l0:x=_|_, y=_|_>                 (while l1: (x != 2)
+<l2:x=0, y=0; l1:x=_|_, y=_|_; tt; l6:x=0, y=0>                    Stmtlist: {
+<l2:x=0, y=0; l4:x=_|_, y=_|_; tt; l6:x=0, y=0>                       (if l2: (x == 0)
+<l3:x=0, y=0; l4:x=_|_, y=_|_; tt; l6:x=0, y=0>                          l3: break; ) 
+<l4:x=_|_, y=_|_; l1:x=_|_, y=_|_; tt; l6:x=_|_, y=_|_>               (if l4: (x == 1)
+<l5:x=_|_, y=_|_; l1:x=_|_, y=_|_; tt; l6:x=_|_, y=_|_>                  l5: break; ) 
+                                                                   } ) 
+                                                             l6:f 
+<l1:x= T , y=0; l3:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>        Prog:
+<l1:x= T , y=0; l3:x=_|_, y=_|_; ff; l0:x=_|_, y=_|_>           (while l1: (0 < 1)
+<l2:x= T , y=0; l1:x= T , y=0; ff; l0:x=_|_, y=_|_>                l2: x = (x + 2); ) 
+                                                             l3: 
+# end
+bash-3.2$ exit
+
+Script done on Sun Oct 22 20:10:39 2017

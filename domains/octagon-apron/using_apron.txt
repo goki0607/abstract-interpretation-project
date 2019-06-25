@@ -1,0 +1,15 @@
+ocamlfind ocamlc -c -package apron test.ml
+
+
+
+
+ocamlfind ocamlc -package apron -c test.ml
+
+
+ocamlc.opt -o out -verbose -I /Users/goki/.opam/4.06.0/lib/gmp -I /Users/goki/.opam/4.06.0/lib/apron /Users/goki/.opam/4.06.0/lib/ocaml/unix.cma /Users/goki/.opam/4.06.0/lib/ocaml/bigarray.cma /Users/goki/.opam/4.06.0/lib/gmp/gmp.cma /Users/goki/.opam/4.06.0/lib/apron/apron.cma /Users/goki/.opam/4.06.0/lib/apron/boxD.cma /Users/goki/.opam/4.06.0/lib/apron/octD.cma /Users/goki/.opam/4.06.0/lib/apron/polkaMPQ.cma /Users/goki/.opam/4.06.0/lib/apron/ppl.cma test.cmo
+
+
+ocamlfind ocamlc -package apron -package apron.boxD -package apron.octD -package apron.octD -package apron.polkaGrid -package apron.ppl -package apron -c test.ml
+
+
+ocamlfind ocamlc -o out -package apron -package apron.boxD -package apron.octD -package apron.octD -package apron.polkaGrid -package apron.ppl -linkpkg test.cmo -verbose
